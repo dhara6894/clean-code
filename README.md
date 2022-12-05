@@ -17,6 +17,13 @@
 
 		# Recommended 
 		total_active_users = 105
+		
+		# Not recommended
+		expired = True
+		
+		# Recommended
+		is_expired = True
+
 2. Avoid using ambiguous shorthand. 
 - A variable should have a long descriptive name than a short confusing name.
 		
@@ -43,9 +50,27 @@
 
 		def roll_dice():
 			return random.randint(0, DICE_SIDES)
+4. Avoid Double Negatives
+- Let’s agree that a double negative is plain confusing.
+
+		# Example to check if a user's membership is valid or not:
+
+		# Not recommended
+		is_invalid = False
+		if not is_invalid:
+		    print("User's membership is valid!")
+
+		# Recommended
+		is_valid = True
+		if not is_valid:
+		    print("User's membership is invalid!")
 		
-### Functions
-4. Be consistent with your function naming convention.
+## Functions
+1. Keep simple, small functions with descriptive names
+- Split big functions into multiple, meaningful functions, and make the code more readable
+- Don’t be afraid to make a name long. A long descriptive name is better than a short enigmatic name. A long descriptive name is better than a long descriptive comment.
+
+2. Be consistent with your function naming convention.
 - As seen with variables above, stick to a naming convention when naming functions. Using different naming conventions would confuse other developers.
 
 		# Not recommended
@@ -81,7 +106,7 @@
 		def fetch_post(id):
 			# do something
 			pass
-5. Functions should do one thing and do it well. 
+3. Functions should do one thing and do it well. 
 - Write short and simple functions that perform a single task. A good rule of thumb to note is that if your function name contains “and” you may need to split it into two functions.
 
 		# Not recommended
@@ -100,30 +125,38 @@
 		def display_users(users):
 			for user in users:
 				print(user)
-### Classes
-6. Do not add redundant context
+4. Fewer arguments, better readability
+## Classes
+1. Do not add redundant context
 
 		# Not recommended
-		class Person:
-			def __init__(self, person_username, person_email, person_phone, person_address):
-				self.person_username = person_username
-				self.person_email = person_email
-				self.person_phone = person_phone
-				self.person_address = person_address
+		class employee:
+		    employee_name = ' '
+		    employee_age = ' '
 
 		# Recommended
-		class Person:
-			def __init__(self, username, email, phone, address):
-
-				self.username = username
-				self.email = email
-				self.phone = phone
-				self.address = address
+		class employee:
+		    name = ' '
+		    age = ' '
 # How to Use Code Comments
 ## Comments rules
 - Always try to explain yourself in code.
+
+		## student is eligible for blood donation
+		if student.age >= 17 and student.weight >= 58.0 and student.height >= 1.55:
+		     schedule_blood_donating_session_with(student)
 - Don't be redundant.
+
+		## if the student is at least 18 years of age
+		if student.age >= 18: 
+		     ## send meeting invitation to the student 
+		     send_message_to(student, meeting_invitation)
+		else: ## if the student is younger than 18 years 
+		     ## sends a meeting invitation to the student’s legal guardian 
+		     send_message_to(student.parent,meeting_invitation)
 - Don't add obvious noise.
+		
+		i++ ## increment i
 		
 		numbers = [1, 2, 3, 4, 5]
 
@@ -131,10 +164,15 @@
 		average = sum(numbers) / len(numbers)
 		print(average)
 - Don't use closing brace comments.
-- Use as explanation of intent.
-- Use as clarification of code.
+- Use as explanation of intent or clarification of code.
 - Use as warning of consequences.
+		
+		Often we know that certain code lines are very necessary and that the program,
+		for example, could crash without them. In this situation, other developers might be warned
+		of the value of certain code lines.
 - Don't comment out code. Just remove.
 
-		The worst thing you can do is to leave code commented out in your programs. All the debug code or debug messages should be removed before pushing to a version control system, otherwise, your colleagues will be scared of deleting it and your commented code will stay there forever.
+		The worst thing you can do is to leave code commented out in your programs.
+		All the debug code or debug messages should be removed before pushing to a version control system,
+		otherwise, your colleagues will be scared of deleting it and your commented code will stay there forever.
 
