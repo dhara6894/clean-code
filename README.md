@@ -32,12 +32,12 @@ is_expired = True
 ```python
 # Not recommended
 fn = 'John'
-Ln = ‘Doe’
+Ln = 'Doe'
 cre_tmstp = 1621535852
 
 # Recommended
-first_name = ‘JOhn’
-Las_name = ‘Doe’
+first_name = 'John'
+Las_name = 'Doe'
 creation_timestamp = 1621535852
 ```
 
