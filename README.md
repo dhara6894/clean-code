@@ -192,6 +192,7 @@ print(average)
 - Don't use closing brace comments.
 - Use as explanation of intent or clarification of code.
 - Use as TODO comments
+- Avoid "journaling" comments
 - Use as warning of consequences.
 		
 		Often we know that certain code lines are very necessary and that the program,
