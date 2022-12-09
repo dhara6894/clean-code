@@ -132,7 +132,7 @@ def fetch_and_display_users():
 
 
 # Recommended
-def fetch_usersl():
+def fetch_user():
 	users = [] # result from some api call
 	return users
 
@@ -191,6 +191,7 @@ print(average)
 ```
 - Don't use closing brace comments.
 - Use as explanation of intent or clarification of code.
+- Use as TODO comments
 - Use as warning of consequences.
 		
 		Often we know that certain code lines are very necessary and that the program,
@@ -201,4 +202,6 @@ print(average)
 		The worst thing you can do is to leave code commented out in your programs.
 		All the debug code or debug messages should be removed before pushing to a version control system,
 		otherwise, your colleagues will be scared of deleting it and your commented code will stay there forever.
+
+  
 
