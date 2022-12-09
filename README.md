@@ -78,9 +78,9 @@ if not is_valid:
 ## Functions
 1. Keep simple, small functions with descriptive names
 - Split big functions into multiple, meaningful functions, and make the code more readable
-- Don’t be afraid to make a name long. A long descriptive name is better than a short enigmatic name. A long descriptive name is better than a long descriptive comment.
+- Don’t be afraid to make a name long. A long descriptive name is better than a short enigmatic name.
 
-2. Be consistent with your function naming convention.
+1. Be consistent with your function naming convention.
 - As seen with variables above, stick to a naming convention when naming functions. Using different naming conventions would confuse other developers.
 
 ```python
